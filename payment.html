@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Receipt</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Online Library</a>
+
+    <!-- Toggler/collapsible Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="cart.html">Cart</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Payment Receipt Section -->
+<div class="container mt-4">
+    <h2>Payment Receipt</h2>
+
+    <!-- Receipt Table -->
+    <table class="table mt-3">
+        <thead>
+            <tr>
+                <th>Book Title</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="receiptItems">
+            <!-- Dynamically load receipt items using JavaScript -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2" class="text-right"><strong>Total Amount: $<span id="totalAmount">0.00</span></strong></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- Return Home Link -->
+    <p class="mt-4"><a href="index.html">Return to Home</a></p>
+</div>
+
+<!-- Include script.js at the end of the body to fetch and display payment receipt items -->
+<script src="script.js"></script>
+
+<!-- JavaScript to handle payment receipt functionality -->
+<script>
+    // Function to fetch and display payment receipt items
+    function fetchPaymentReceiptItems() {
+        // Fetch payment receipt items from local storage or an API
+        // ...
+
+        // Dynamically load payment receipt items using JavaScript
+        const receiptItemsContainer = document.getElementById('receiptItems');
+        // ...
+    }
+
+    // Function to calculate total amount
+    function calculateTotalAmount() {
+        // Fetch payment receipt items from local storage or an API
+        // ...
+
+        // Calculate total amount based on pricing details fetched from books.json
+        // Update the total amount in the HTML
+        const totalAmountElement = document.getElementById('totalAmount');
+        totalAmountElement.textContent = calculateTotalAmountFromReceiptItems().toFixed(2);
+    }
+
+    // Example function to calculate total amount from payment receipt items
+    function calculateTotalAmountFromReceiptItems() {
+        // Fetch payment receipt items from local storage or an API
+        // ...
+
+        // Calculate total amount based on pricing details fetched from books.json
+        let totalAmount = 0;
+        // ...
+
+        return totalAmount;
+    }
+
+    // Initial function calls
+    fetchPaymentReceiptItems();
+    calculateTotalAmount();
+</script>
+
+</body>
+</html>

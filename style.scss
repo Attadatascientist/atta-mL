@@ -1,0 +1,51 @@
+/* Define variables for repeated values */
+$card-height: 200px;
+$card-width: 200px;
+
+
+/* Carousel styles */
+#carouselExampleSlidesOnly {
+  margin-top: 20px;
+}
+
+/* Book card styles */
+.card {
+  margin-bottom: 20px;
+  height: $card-height;
+}
+
+.card-img-top {
+  height: $card-height;
+  width: $card-width;
+  object-fit: cover; /* Ensure the image covers the entire card */
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* Override Bootstrap container width */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Override Bootstrap row margin */
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+/* Override Bootstrap column padding */
+.col-md-4 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar navbar-expand-lg navbar-light bg-light{
+    background-color: #007bff;
+}

@@ -1,112 +1,514 @@
 <!DOCTYPE html>
-<html>
-    <head> 
-        <title>my portfoliowebsite</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,
-        500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
-         crossorigin="anonymous" referrerpolicy="no-referrer" >
-    </head>
-    <body>
-        <div class="hero">
-            <nav>
-                <h2 class="logo">portfo<span>lio</span></h2>
-                <ul>
-                    <li> <a href="#"> Home </a></li>
-                    <li> <a href="#">About Us</a></li>
-                    <li> <a href="#">Services</a></li>
-                    <li> <a href="#">Skills</a></li>
-                    <li> <a href="#">Contact Us</a></li>
-                </ul>
-                 <a  href="#" class="btn">Subscribe</a>
-            </nav>
-            <div class="content">
-                <h4> hello , my name is</h4>
-                <h1> Atta <span>Ullah</span> </h1>
-                <h3>I am Machine Learning Engineer</h3>
-                <div class="newslatter">
-                    <form>
-                        <input type="email" name="newslatter" id="mail" placeholder="Enter Your Email">
-                        <input type="submit" name="submit" value="Lets Start">
-                    </form>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Library</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Bootstrap JavaScript dependencies (jQuery and Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.scss">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Online Library Management System</a>
+
+    <!-- Toggler/collapsible Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="cart.html">Cart</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="categorie.html">Categories</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="categorie.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Book Categories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="bookCategories">
+                    <!-- Dynamically populate categories from books.json using JavaScript -->
                 </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Image Slideshow -->
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <!-- Add your slideshow items with images and captions -->
+        <div class="carousel-item active">
+           <img class="mySlides" src="./library.jpg" style="width: 100%; height: 600px">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Online Library Management System</h5>
             </div>
         </div>
-<!---abut section-->
-<section class="About">
-<div class="main">
-   <img src="tdd2.png" alt="Description of the image" >
+        <!-- Add these buttons wherever you want in your HTML -->
 
-    <div class="about-text">
-        <h2> About me</h2>
-        <h5><span>Machine</span> Learning Engineer</h5>
-        <p> I am a passionate and dedicated Machine Learning Engineer. With a deep understanding of algorithms,
-             data structures, and statistical modeling, I harness the power of data to build intelligent 
-             systems that drive innovation and efficiency.</p>
-             <button type="button" >Let's Talk</button>
+        <div class="carousel-item">
+            <img src="library2.jpg" src="./library2.jpg" style="width: 100%; height: 600px">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Buy Books from this Library</h5>
+            </div>
+        </div>
+        <!-- Add more slides as needed -->
+    </div>
+</div>
 
-    </div>
-</div>
-</section>
-<div class="Services">
-<div class="tittle">
-   <h2> Our services</h2>
-</div>
-<div class="box">
+
+<!-- Section for Book Details -->
+<div class="row">
+<div class="col-md-4 mb-4">
     <div class="card">
-   <i class="fas fa-bars"></i>
-   <h5> ML Models Development </h5>
-   <div class="pra">
-    <p> We offer Custom model design and training for specific tasks.
-        Fine-tuning of existing pre-trained models Deployment </p>
-        <p style="text-align: center;">
-            <a class="button" href="#">Read more</a>
-        </p>
-   </div>
+        <img src="a1.jpg" class="card-img-top img-fluid" alt="To Kill a Mockingbird" style="height: 200px;width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">To Kill a Mockingbird</h5>
+            <p class="card-text">Classic novel set in the American South during the 1930s</p>
+            <p class="card-text">$ 12.99</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
     </div>
+</div>
+<div class="col-md-4 mb-4">
     <div class="card">
-   <i class="fas fa-user"></i>
-   <h5>  Deep Learning Specialization</h5>
-   <div class="pra">
-    <p> Convolutional Neural Networks (CNNs) for image tasks.
-        Recurrent Neural Networks for sequence tasks.
-        Transformer models for NLP tasks </p>
-        <p style="text-align: center;">
-            <a class="button" href="#">Read more</a>
-        </p>
-   </div>
+        <img src="a2.jpg" class="card-img-top img-fluid" alt="1984" style="height: 200px;width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">1984</h5>
+            <p class="card-text">Classic dystopian novel about totalitarianism and surveillance</p>
+            <p class="card-text">$9.99</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
     </div>
+</div>
+<div class="col-md-4 mb-4">
     <div class="card">
-   <i class="fas fa-bell"></i>
-   <h5> Model Deployment And Integration</h5>
-   <div class="pra">
-    <p> Integrating ML models into web apps, mobile apps, or other software.
-        Scaling and optimizing models for cloud deployment. </p>
-        <p style="text-align: center;">
-            <a class="button" href="#">Read more</a>
-        </p>
-   </div>
+        <img src="a3.jpg" class="card-img-top img-fluid" alt="The Great Gatsby" style="height: 200px;width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">The Great Gatsby</h5>
+            <p class="card-text">A story of the Jazz Age and the American Dream.</p>
+            <p class="card-text">$11.50</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a4.jpg" class="card-img-top img-fluid" alt="Moby-Dick" style="height: 200px;width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">Moby-Dick</h5>
+            <p class="card-text">Novel about the voyage of the whaling ship Pequod.</p>
+            <p class="card-text">$13.25</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a5.jpg" class="card-img-top img-fluid" alt="Brave New World" style="height: 200px;width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">Brave New World</h5>
+            <p class="card-text">A dystopian social science fiction novel..</p>
+            <p class="card-text">$10.75</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a6.jpg" class="card-img-top img-fluid" alt="Pride and Prejudice" style="height: 200px;width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">Pride and Prejudice</h5>
+            <p class="card-text">Classic romantic novel of manners.</p>
+            <p class="card-text">$9.99</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a7.jpg" class="card-img-top img-fluid" alt="the Catcher in the Rye" style="height: 200px;width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">the Catcher in the Rye</h5>
+            <p class="card-text">Novel known for its themes of teenage angst and alienation..</p>
+            <p class="card-text">$8.50</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a8.jpg" class="card-img-top img-fluid" alt="The Lord of the Rings" style="height: 200px;width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">The Lord of the Rings</h5>
+            <p class="card-text">High-fantasy novel series.</p>
+            <p class="card-text">$15.99</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a9.jpg" class="card-img-top img-fluid" alt="The Hobbit" style="height: 200px;width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">The Hobbit</h5>
+            <p class="card-text">Prequel to The Lord of the Rings.</p>
+            <p class="card-text">$11.75</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a10.jpg" class="card-img-top img-fluid" alt="The Da Vinci Code" style="height: 200px;width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">The Da Vinci Code</h5>
+            <p class="card-text">Mystery thriller novel.</p>
+            <p class="card-text">$14.25</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a11.jpg" class="card-img-top img-fluid" alt="The Alchemist" style="height: 200px;width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">The Alchemist</h5>
+            <p class="card-text">Philosophical novel.</p>
+            <p class="card-text">$10.50</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a12.jpg" class="card-img-top img-fluid" alt="A Tale of Two Cities" style="height: 200px;width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">A Tale of Two Cities</h5>
+            <p class="card-text">Historical novel set during the French Revolution.</p>
+            <p class="card-text">$12.25</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+<!-- Book 13 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a13.jpg" class="card-img-top img-fluid" alt="War and Peace" style="height: 200px; width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">War and Peace</h5>
+            <p class="card-text">Epic novel set during the Napoleonic Wars.</p>
+            <p class="card-text">$16.99</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Book 14 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a14.jpg" class="card-img-top img-fluid" alt="The Picture of Dorian Gray" style="height: 200px; width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">The Picture of Dorian Gray</h5>
+            <p class="card-text">Gothic and philosophical novel.</p>
+            <p class="card-text">$11.99</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Book 15 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a15.jpg" class="card-img-top img-fluid" alt="The Adventures of Huckleberry Finn" style="height: 200px; width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">The Adventures of Huckleberry Finn</h5>
+            <p class="card-text">Novel known for its social commentary.</p>
+            <p class="card-text">$10.99</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Add more book cards as needed -->
+<!-- Book 16 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a16.jpg" class="card-img-top img-fluid" alt="Jane Eyre" style="height: 200px; width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">Jane Eyre</h5>
+            <p class="card-text">Autobiographical novel.</p>
+            <p class="card-text">$9.50</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Book 17 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a17.jpg" class="card-img-top img-fluid" alt="The Road" style="height: 200px; width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">The Road</h5>
+            <p class="card-text">Post-apocalyptic novel.</p>
+            <p class="card-text">$13.75</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Book 18 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a18.jpg" class="card-img-top img-fluid" alt="Frankenstein" style="height: 200px; width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">Frankenstein</h5>
+            <p class="card-text">Gothic novel about science and creation.</p>
+            <p class="card-text">$11.25</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Book 19 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a19.jpg" class="card-img-top img-fluid" alt="The Stand" style="height: 200px; width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">The Stand</h5>
+            <p class="card-text">Post-apocalyptic horror/fantasy novel.</p>
+            <p class="card-text">$14.50</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Book 20 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a20.jpg" class="card-img-top img-fluid" alt="Crime and Punishment" style="height: 200px; width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">Crime and Punishment</h5>
+            <p class="card-text">Psychological novel.</p>
+            <p class="card-text">$12.50</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Book 21 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a21.jpg" class="card-img-top img-fluid" alt="Les Miserables" style="height: 200px; width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">Les Miserables</h5>
+            <p class="card-text">Historical novel set in France.</p>
+            <p class="card-text">$13.99</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Book 22 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a22.jpg" class="card-img-top img-fluid" alt="The Shining" style="height: 200px; width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">The Shining</h5>
+            <p class="card-text">Horror novel.</p>
+            <p class="card-text">$11.75</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Book 23 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a23.jpg" class="card-img-top img-fluid" alt="The Odyssey" style="height: 200px; width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">The Odyssey</h5>
+            <p class="card-text">Ancient Greek epic poem.</p>
+            <p class="card-text">$10.25</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Book 24 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a24.jpg" class="card-img-top img-fluid" alt="The Stranger" style="height: 200px; width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">The Stranger</h5>
+            <p class="card-text">Existential novel.</p>
+            <p class="card-text">$12.25</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+<!-- Book 25 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a25.jpg" class="card-img-top img-fluid" alt="Gone with the Wind" style="height: 200px; width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">Gone with the Wind</h5>
+            <p class="card-text">Historical novel set in the American South during the Civil War.</p>
+            <p class="card-text">$13.50</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Book 26 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a26.jpg" class="card-img-top img-fluid" alt="The Kite Runner" style="height: 200px; width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">The Kite Runner</h5>
+            <p class="card-text">Contemporary novel set in Afghanistan.</p>
+            <p class="card-text">$10.99</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Book 27 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a27.jpg" class="card-img-top img-fluid" alt="The Bell Jar" style="height: 200px; width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">The Bell Jar</h5>
+            <p class="card-text">Autobiographical novel.</p>
+            <p class="card-text">$11.50</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Book 28 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a28.jpg" class="card-img-top img-fluid" alt="The Count of Monte Cristo" style="height: 200px; width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">The Count of Monte Cristo</h5>
+            <p class="card-text">Adventure novel.</p>
+            <p class="card-text">$12.99</p>
+             <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Book 29 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a29.jpg" class="card-img-top img-fluid" alt="Anna Karenina" style="height: 200px; width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">Anna Karenina</h5>
+            <p class="card-text">Tragic novel.</p>
+            <p class="card-text">$12.75</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Book 30 -->
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="a30.jpg" class="card-img-top img-fluid" alt="The Grapes of Wrath" style="height: 200px; width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">The Grapes of Wrath</h5>
+            <p class="card-text">Novel set during the Great Depression.</p>
+            <p class="card-text">$11.99</p>
+            <button class="btn btn-primary">
+                <a href="cart.html" style="color:blue; text-decoration: none; color: black;"> Add to Cart</a> 
+            </button>
+        </div>
     </div>
 </div>
 </div>
-<!--contact us-->
-<div class="Contact-me">
-    <p>Let me Build you A Machine Learning Models </p>
-    <a class="button-two" href="#">Hire Me</a>
-</div>
-<!--Footer start-->
-<footer>
-    <p>Atta Ullah</p>
-    <p>For the details visits of my Machine Learning Projects Clicks on links below </p>
-    <div class="social">
-        <a href="#"> <i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <p class="end"> CopyRight By Atta Ullah</p>
-</footer>
-    </body>
+
+
+<!-- Include script.js at the end of the body to fetch and display book details -->
+<script src="script.js"></script>
+
+</body>
 </html>
